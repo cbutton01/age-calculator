@@ -11,17 +11,15 @@ describe('NumberOfSeconds', function(){
   });
   it('should return 300 seconds', function (){
     seconds.minutes *= 5;
-    let secondsInMinute = seconds.secondsToMinutes();
-    expect(secondsInMinute).toEqual(300);
+    expect(seconds.secondsToMinutes()).toEqual(300);
   });
 
   it('should return 3,600 seconds in one hour', function (){
-    let secondsInAnHour = seconds.minutesToHours();
-    expect(secondsInAnHour).toEqual(3600);
+    expect(seconds.minutesToHours()).toEqual(3600);
   });
 
   it('should show 24 hours in one day', function(){
-    let hoursInADay = seconds.hoursInDay();
+    let hoursInADay = seconds.hoursInDay;
     expect(hoursInADay).toEqual(24);
   });
 
