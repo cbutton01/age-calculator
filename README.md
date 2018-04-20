@@ -32,3 +32,7 @@
   * Use the Date() object from javascript to receive a date to Calculate the number of seconds since that date:
 
     *  Date(1992, 03, 24) is April 24th 1992 and will return the value of 788,940,000.
+
+  * Use the app to Calculate age on other planets:
+
+    * Date(1992, 03, 24) will return a different age on a different planet
