@@ -15,6 +15,12 @@ class Birthday {
     let totalSeconds = this.minutesInHour * this.secondsInMinute;
     return totalSeconds;
   }
+
+  findBirthday(year, month, day){
+    let myBirthday = new Date(year, month-1, day);
+    return '' + myBirthday;
+  }
+
 }
 
-export { Birthday }
+export { Birthday };

@@ -28,4 +28,9 @@ describe('Birthday', function(){
     expect(totalSeconds).toEqual(86400);
   });
 
+  it('should return a string with the appropriate date', function(){
+    expect(seconds.findBirthday(1992, 04, 24)).toEqual('Fri Apr 24 1992 00:00:00 GMT-0700 (Pacific Daylight Time)');
+    console.log(seconds.findBirthday(1992, 04, 24));
+  });
+
 });
