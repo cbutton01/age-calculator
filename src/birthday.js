@@ -1,4 +1,4 @@
-class NumberOfSeconds {
+class Birthday {
   constructor() {
     this.seconds = 60;
     this.minutes = 1;

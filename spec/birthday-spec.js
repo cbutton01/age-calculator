@@ -1,9 +1,9 @@
-import { NumberOfSeconds } from '../src/birthday.js';
+import { Birthday } from '../src/birthday.js';
 
 describe('NumberOfSeconds', function(){
   let seconds;
   beforeEach(function(){
-    seconds = new NumberOfSeconds();
+    seconds = new Birthday();
     console.log(NumberOfSeconds);
   });
   it('should return 60 seconds', function(){
