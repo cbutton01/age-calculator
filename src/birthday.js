@@ -16,7 +16,7 @@ class Birthday {
   }
 
   hoursInDay(){
-    hoursInaDay = this.hours * 24;
+    let hoursInaDay = this.hours * 24;
     return hoursInaDay;
   }
 }
