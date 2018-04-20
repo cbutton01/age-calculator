@@ -36,3 +36,22 @@
   * Use the app to Calculate age on other planets:
 
     * Date(1992, 03, 24) will return a different age on a different planet
+
+
+### Bugs
+
+ * There are no known bugs at this time.
+
+
+### Install instructions
+
+  * Clone or download the repository at https://github.com/cbutton01/age-calculator.git
+
+  * Navigate to the directory in the console and run npm install.
+
+  * Use npm test to run the specification tests.
+
+
+### Author
+
+  * Cameron Button April 20th, 2018.
