@@ -1,7 +1,8 @@
 class Birthday {
   constructor() {
     this.seconds = 60;
-    this.minutes = 1;
+    this.minutes = this.seconds/60;
+    this.hours = this.minutes * 60;
   }
 
   secondsToMinutes() {
@@ -10,11 +11,14 @@ class Birthday {
   }
 
   minutesToHours(){
-    let hours = this.minutes * 60;
-    let totalSeconds = hours * this.minutes * this.seconds;
+    let totalSeconds = this.hours * this.minutes * this.seconds;
     return totalSeconds;
   }
 
+  hoursInDay(){
+    hoursInaDay = this.hours * 24;
+    return hoursInaDay;
+  }
 }
 
-export { NumberOfSeconds }
+export { Birthday }

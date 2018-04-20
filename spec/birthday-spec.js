@@ -4,7 +4,6 @@ describe('NumberOfSeconds', function(){
   let seconds;
   beforeEach(function(){
     seconds = new Birthday();
-    console.log(NumberOfSeconds);
   });
   it('should return 60 seconds', function(){
     let secondsInMinute = seconds.secondsToMinutes();
@@ -19,6 +18,11 @@ describe('NumberOfSeconds', function(){
   it('should return 3,600 seconds in one hour', function (){
     let secondsInAnHour = seconds.minutesToHours();
     expect(secondsInAnHour).toEqual(3600);
+  });
+
+  it('should show 24 hours in one day', function(){
+    let hoursInADay = seconds.hoursInDay();
+    expect(hoursInADay).toEqual(24);
   });
 
 });
