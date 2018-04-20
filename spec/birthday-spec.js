@@ -1,6 +1,6 @@
 import { Birthday } from '../src/birthday.js';
 
-describe('NumberOfSeconds', function(){
+describe('Birthday', function(){
   let seconds;
   beforeEach(function(){
     seconds = new Birthday();
@@ -18,9 +18,14 @@ describe('NumberOfSeconds', function(){
     expect(seconds.minutesToHours()).toEqual(3600);
   });
 
-  it('should show 24 hours in one day', function(){
+  it('should return 24 hours in one day', function(){
     let hoursInADay = seconds.hoursInDay;
     expect(hoursInADay).toEqual(24);
+  });
+
+  it('should return total number of seconds in a day', function(){
+    let totalSeconds = seconds.hoursInDay * seconds.minutesToHours();
+    expect(totalSeconds).toEqual(86400);
   });
 
 });
