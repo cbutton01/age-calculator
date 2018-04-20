@@ -43,7 +43,7 @@ describe('Birthday', function(){
   });
 
   it('should return my age in seconds on mercury', function(){
-    let mercuryAge = myAge * .24;
+    let mercuryAge = seconds.mercuryAge(1992, 4, 24);
     expect(mercuryAge).not.toEqual(myAge);
     console.log(mercuryAge);
     console.log(myAge);
