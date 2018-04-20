@@ -16,5 +16,9 @@ describe('NumberOfSeconds', function(){
     expect(secondsInMinute).toEqual(300);
   });
 
+  it('should return 3,600 seconds in one hour', function (){
+    let secondsInAnHour = seconds.minutesToHours();
+    expect(secondsInAnHour.totalSeconds).toEqual(3600);
+  });
 
 });
