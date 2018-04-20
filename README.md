@@ -28,4 +28,7 @@
 
     * "1 year" will return "365.25 days".  Because we already know the number of hours in 1 day and the number of minutes in 1 hour and the number of seconds in 1 minute, "1 year" will also equal "31,537,600 seconds".
 
-  
+
+  * Use the Date() object from javascript to receive a date to Calculate the number of seconds since that date:
+
+    *  Date(1992, 03, 24) is April 24th 1992 and will return the value of 788,940,000.
