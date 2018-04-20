@@ -18,7 +18,7 @@ class Birthday {
 
   findBirthday(year, month, day){
     let myBirthday = new Date(year, month-1, day);
-    return '' + myBirthday;
+    return myBirthday;
   }
 
 }

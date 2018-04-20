@@ -2,8 +2,12 @@ import { Birthday } from '../src/birthday.js';
 
 describe('Birthday', function(){
   let seconds;
+  let myBirthday;
+  let myAge;
   beforeEach(function(){
     seconds = new Birthday();
+    myBirthday = seconds.findBirthday(1992, 4, 24);
+    myAge = (Date.now() - myBirthday) / 1000;
   });
   it('should return 60 seconds', function(){
     let secondsInMinute = seconds.secondsToMinutes();
@@ -29,9 +33,19 @@ describe('Birthday', function(){
   });
 
   it('should return a string with the appropriate date', function(){
-    let myBirthday = seconds.findBirthday(1992, 4, 24);
     expect(myBirthday).not.toEqual('');
     console.log('' + myBirthday);
   });
 
+  it('should return my age in seconds', function(){
+    expect(myAge).not.toEqual(NaN);
+    console.log(myAge);
+  });
+
+  it('should return my age in seconds on mercury', function(){
+    let mercuryAge = myAge * .24;
+    expect(mercuryAge).not.toEqual(myAge);
+    console.log(mercuryAge);
+    console.log(myAge);
+  });
 });
