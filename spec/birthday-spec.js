@@ -4,10 +4,12 @@ describe('Birthday', function(){
   let seconds;
   let myBirthday;
   let myAge;
+  let dateToTestWith;
   beforeEach(function(){
+    dateToTestWith = new Date(2018, 3, 24);
     seconds = new Birthday();
-    myBirthday = seconds.findBirthday(1992, 4, 24);
-    myAge = (Date.now() - myBirthday) / 1000;
+    myBirthday = new Date (1992, 3, 24);
+    myAge = (dateToTestWith - myBirthday) / 1000;
   });
   it('should return 60 seconds', function(){
     let secondsInMinute = seconds.secondsToMinutes();
@@ -30,11 +32,11 @@ describe('Birthday', function(){
   it('should return total number of seconds in a day', function(){
     let totalSeconds = seconds.hoursInDay * seconds.minutesToHours();
     expect(totalSeconds).toEqual(86400);
+    console.log(totalSeconds);
   });
 
   it('should return a string with the appropriate date', function(){
     expect(myBirthday).not.toEqual('');
-    console.log('' + myBirthday);
   });
 
   it('should return my age in seconds', function(){
@@ -45,7 +47,5 @@ describe('Birthday', function(){
   it('should return my age in seconds on mercury', function(){
     let mercuryAge = seconds.mercuryAge(1992, 4, 24);
     expect(mercuryAge).not.toEqual(myAge);
-    console.log(mercuryAge);
-    console.log(myAge);
   });
 });
